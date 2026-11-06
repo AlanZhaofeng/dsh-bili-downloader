@@ -1,0 +1,5 @@
+# 装进 profile 的一个 loader entry。
+# id 同时是工具/日志里能认出来的名字；宿主半边在 lib/index.js 里注册 bili_download / bili_login。
+- insert:
+    - id: bili-downloader
+      name: dsh-bili-downloader

@@ -1,0 +1,39 @@
+{
+  "name": "dsh-bili-downloader",
+  "version": "0.2.1",
+  "description": "B 站视频/音频下载器（DSH 插件）：bili_download + bili_login + 左侧栏面板（扫码 / 下载 / 进度）",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "bilibili",
+    "download"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  }
+}
